@@ -1,0 +1,15 @@
+---
+appName: ruby-console
+env: staging
+
+replicas: 2
+
+imageRepo: ruby
+imageTag: alpine
+
+service:
+  type: NodePort
+  targetPort: 3000
+
+ingress:
+  enabled: false

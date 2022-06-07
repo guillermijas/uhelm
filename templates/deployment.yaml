@@ -8,6 +8,7 @@ metadata:
     env: {{ .Values.env }}
 spec:
   replicas: {{ .Values.replicas }}
+  revisionHistoryLimit: {{ default 2 .Values.revisionHistoryLimit }}
   selector:
     matchLabels:
       app: {{ .Values.appName }}

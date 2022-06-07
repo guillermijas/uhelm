@@ -22,10 +22,8 @@ spec:
       - name: app
         image: {{ .Values.imageRepo }}:{{ .Values.imageTag }}
         imagePullPolicy: IfNotPresent
-        command:
-        - /bin/sh
-        - -c
-        - "irb"
+        command: [ "sleep" ]
+        args: [ "infinity" ]
         env:
         - name: SHA1_SECRET
           value: {{ .Values.sha1Secret }}
